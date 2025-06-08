@@ -9,7 +9,7 @@ const router = express.Router();
 router.route('/').post(async (req, res) => {
     try {
         const { prompt } = req.body;
-        const DEEPAI_API_KEY = "93c29540-1282-4455-807a-ad149b9f31f3";
+        const DEEPAI_API_KEY = process.env.DEEPAI_API_KEY;
 
         console.log("Sending request to DeepAI with prompt:", prompt);
 
